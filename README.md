@@ -10,7 +10,7 @@ Following the PedroTech MERN Tutorial For Beginners | Learn MERN In 60 Minutes t
 npm init -y
 
 # Install the relevant libraries
-npm install express mongoose cors nodemon
+npm install express mongoose cors nodemon mongodb
 
 
 ```
