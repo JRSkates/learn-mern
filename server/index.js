@@ -1,5 +1,9 @@
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
+
+// the arguement here references the cluster we created (our Mongo Database)
+mongoose.connect("mongodb+srv://jackskates:smudge14@cluster0.ufdlybw.mongodb.net/learnmern?retryWrites=true&w=majority");
 
 // const cors = require('cors');
 
