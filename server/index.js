@@ -15,6 +15,7 @@ app.get("/getUsers", (req, res) => {
     } 
     res.status(200).json(result);
   })
+  console.log(result);
 });
 
 
