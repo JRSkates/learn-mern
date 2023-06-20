@@ -3,7 +3,10 @@ const app = express();
 const mongoose = require('mongoose');
 const UserModel = require('./models/users');
 
+const cors = require('cors');
+
 app.use(express.json());
+app.use(cors());
 
 // the arguement here references the cluster we created (our Mongo Database)
 mongoose.connect(
@@ -11,13 +14,15 @@ mongoose.connect(
 );
 
 app.get("/getUsers", (req, res) => {
-  UserModel.find({}).then(async (err, result) => {
-    if (err) {
-      console.error(err);
-    } 
-    res.status(200).json(result);
-    // return result
-  })
+  UserModel.find({})
+    .then((result) => {
+      console.log(result);
+      res.status(200).json(result);
+    })
+    .catch((error) => {
+      console.error(error);
+      res.status(500).json({ error: "An error occurred" });
+    });
 });
 
 app.post("/createUser", async (req, res) => {

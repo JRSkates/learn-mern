@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+  color: #0c0cd4;
+  background-color: #f2f2f2;
+  background-size: cover;
+}
+
+.usersDisplay {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.usersDisplay > div {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.usersDisplay h1 {
+  font-size: 18px;
+  color: #f6eeee;
+  margin-bottom: 5px;
+}
+
+.usersDisplay > div:hover {
+  background-color: #e6e6e65e;
+  cursor: pointer;
+}
