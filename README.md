@@ -6,11 +6,9 @@ Following the PedroTech MERN Tutorial For Beginners | Learn MERN In 60 Minutes t
 - Create two subdirectories, client and server for the frontend and backend respectively
   
 ```zsh
-# Set up nmp within /server
+# Set up npm within /server
 npm init -y
 
 # Install the relevant libraries
 npm install express mongoose cors nodemon mongodb
-
-
 ```
