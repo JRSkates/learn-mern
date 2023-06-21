@@ -69,20 +69,26 @@ function App() {
   //console.log(listOfUsers);
   return (
     <div className="App" style={{ backgroundImage: `url(${backgroundImage})`, fontFamily: 'Montserrat, sans-serif' }}>
-      <form onSubmit={handleSubmit}> 
+      <div>
+      <form onSubmit={handleSubmit} className='form'> 
         <input type="text" name="name" value={formData.name} 
           onChange={handleNameChange}
+          className='input'
+          placeholder= 'Name'
         />
         <input type="number" name="age" value={formData.age} 
           onChange={handleAgeChange}
-
+          className='input'
+          placeholder= 'Age'
         />
         <input type="text" name="username" value={formData.username} 
           onChange={handleUsernameChange}
+          className='input'
+          placeholder= 'Username'
         />
-        <button type="submit">Submit</button>
+        <button type="submit" className='button'>Submit</button>
       </form>
-
+      </div>
       <div className="usersDisplay">
         {listOfUsers.map((user)=> {
           return ( 
